@@ -1,19 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import * as eva from "@eva-design/eva";
+import {
+  ApplicationProvider,
+  Button,
+  Layout,
+  Text,
+} from "@ui-kitten/components";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <ApplicationProvider {...eva} theme={eva.light}>
+      <Layout
+        style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+      >
+        <Text category='h1'>HELLO</Text>
+        <Text>Open up App.js to start working on your app!</Text>
+        <Button
+          icon='camera'
+          mode='contained'
+          onPress={() => console.log("Pressed")}
+        >
+          Press me
+        </Button>
+      </Layout>
+    </ApplicationProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
