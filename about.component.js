@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
 import {
   Divider,
   Icon,
@@ -40,5 +40,7 @@ export const AboutScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // android status bar padding
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });

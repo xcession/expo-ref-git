@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
 import { Button, Divider, Layout, TopNavigation } from "@ui-kitten/components";
 
 export const HomeScreen = ({ navigation }) => {
@@ -24,5 +24,7 @@ export const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // android status bar padding
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
