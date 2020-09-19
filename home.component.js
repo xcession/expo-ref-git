@@ -8,12 +8,10 @@ export const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, styles.droidSafeArea]}>
       <TopNavigation title='Home' alignment='center' />
       <Divider />
-      <Layout
-        style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-      >
+      <Layout style={styles.container}>
         <Button onPress={() => navigation.openDrawer()}>OPEN DRAWER</Button>
         <Button onPress={navigateDetails}>OPEN DETAILS</Button>
       </Layout>
@@ -24,7 +22,8 @@ export const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // android status bar padding
+  },
+  droidSafeArea: {
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });

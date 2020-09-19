@@ -21,16 +21,14 @@ export const DetailsScreen = ({ navigation }) => {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, styles.droidSafeArea]}>
       <TopNavigation
         title='Details'
         alignment='center'
         accessoryLeft={BackAction}
       />
       <Divider />
-      <Layout
-        style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-      >
+      <Layout style={styles.container}>
         <Text category='h1'>DETAILS</Text>
       </Layout>
     </SafeAreaView>
@@ -40,7 +38,8 @@ export const DetailsScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // android status bar padding
+  },
+  droidSafeArea: {
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
