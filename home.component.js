@@ -14,6 +14,7 @@ export const HomeScreen = ({ navigation }) => {
       <Layout
         style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
       >
+        <Button onPress={() => navigation.openDrawer()}>OPEN DRAWER</Button>
         <Button onPress={navigateDetails}>OPEN DETAILS</Button>
       </Layout>
     </SafeAreaView>
