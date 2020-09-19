@@ -23,7 +23,7 @@ export const DetailsScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <TopNavigation
-        title='MyApp'
+        title='Details'
         alignment='center'
         accessoryLeft={BackAction}
       />

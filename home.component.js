@@ -9,7 +9,7 @@ export const HomeScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TopNavigation title='MyApp' alignment='center' />
+      <TopNavigation title='Home' alignment='center' />
       <Divider />
       <Layout
         style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
