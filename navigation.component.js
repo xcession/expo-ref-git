@@ -1,10 +1,10 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import { HomeScreen } from "./home.component";
 import { DetailsScreen } from "./details.component";
 
-const { Navigator, Screen } = createStackNavigator();
+const { Navigator, Screen } = createDrawerNavigator();
 
 const HomeNavigator = () => (
   <Navigator headerMode='none'>
