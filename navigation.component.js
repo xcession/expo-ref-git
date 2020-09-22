@@ -1,16 +1,16 @@
 import React from "react";
+import { Platform, StatusBar, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createStackNavigator } from "@react-navigation/stack";
+
 import { HomeScreen } from "./home.component";
-import { DetailsScreen } from "./details.component";
 import { AboutScreen } from "./about.component";
 
-const { Navigator, Screen } = createDrawerNavigator();
+const { Navigator, Screen } = createStackNavigator();
 
 const HomeNavigator = () => (
   <Navigator headerMode='none'>
     <Screen name='Home' component={HomeScreen} />
-    <Screen name='Details' component={DetailsScreen} />
     <Screen name='About' component={AboutScreen} />
   </Navigator>
 );
@@ -20,3 +20,9 @@ export const AppNavigator = () => (
     <HomeNavigator />
   </NavigationContainer>
 );
+
+const styles = StyleSheet.create({
+  droidSafeArea: {
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
+});
