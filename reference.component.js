@@ -1,5 +1,5 @@
 import React from "react";
-import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import Constants from "expo-constants";
 import {
   Divider,
@@ -49,9 +49,6 @@ export const ReferenceScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  droidSafeArea: {
-    paddingTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
   },
   fontPrimary: { fontFamily: "RobotoSlab_700Bold" },
   fontSecondary: { fontFamily: "Roboto_400Regular" },

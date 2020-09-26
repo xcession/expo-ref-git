@@ -1,13 +1,11 @@
 import React from "react";
 import {
-  Platform,
   SafeAreaView,
   ScrollView,
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
 import Constants from "expo-constants";
-import { StatusBar } from "expo-status-bar";
 import {
   Card,
   Divider,
@@ -135,9 +133,6 @@ export const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  droidSafeArea: {
-    paddingTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
   },
   fontPrimary: { fontFamily: "RobotoSlab_700Bold" },
   fontSecondary: { fontFamily: "Roboto_400Regular" },
