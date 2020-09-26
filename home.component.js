@@ -84,7 +84,6 @@ export const HomeScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={[styles.container, styles.droidSafeArea]}>
-      <StatusBar style='dark' />
       {/* navigation bar */}
       <TopNavigation
         alignment='center'
