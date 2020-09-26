@@ -3,10 +3,10 @@ import {
   Platform,
   SafeAreaView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import { StatusBar } from "expo-status-bar";
 import {
   Card,
   Divider,

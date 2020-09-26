@@ -1,6 +1,5 @@
 import React from "react";
-import { Platform, SafeAreaView, StyleSheet } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
 import {
   Divider,
   Icon,
