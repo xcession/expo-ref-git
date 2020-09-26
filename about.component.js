@@ -50,11 +50,7 @@ export const AboutScreen = ({ navigation }) => {
         <Text style={styles.fontPrimary} category='h1'>
           Git Reference
         </Text>
-        <Text
-          style={[styles.textVersion, { marginBottom: 8 }]}
-          category='c1'
-          appearance='hint'
-        >
+        <Text style={{ marginBottom: 8 }} category='c1' appearance='hint'>
           Version {Constants.manifest.version}
         </Text>
         <Image
@@ -75,5 +71,4 @@ const styles = StyleSheet.create({
   },
   fontPrimary: { fontFamily: "RobotoSlab_700Bold" },
   fontSecondary: { fontFamily: "Roboto_400Regular" },
-  textVersion: { fontFamily: "RobotoMono_400Regular" },
 });
