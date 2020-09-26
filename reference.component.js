@@ -13,7 +13,7 @@ import {
 const BackIcon = (props) => <Icon {...props} name='arrow-back' />;
 const MenuIcon = (props) => <Icon {...props} name='menu' />;
 
-export const ReferenceScreen = ({ navigation }) => {
+export const RefScreen = ({ navigation }) => {
   const navigateBack = () => {
     navigation.goBack();
   };
