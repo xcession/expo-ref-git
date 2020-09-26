@@ -1,12 +1,7 @@
 import React from "react";
 import Constants from "expo-constants";
-import {
-  Image,
-  Platform,
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-} from "react-native";
+import { Image, Platform, SafeAreaView, StyleSheet } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import {
   Divider,
   Icon,
