@@ -83,7 +83,7 @@ export const HomeScreen = ({ navigation }) => {
   const [value, setValue] = React.useState("");
 
   return (
-    <SafeAreaView style={[styles.container, styles.droidSafeArea]}>
+    <SafeAreaView style={styles.container}>
       {/* navigation bar */}
       <TopNavigation
         alignment='center'
