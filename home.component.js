@@ -88,7 +88,7 @@ export const HomeScreen = ({ navigation }) => {
       <TopNavigation
         alignment='center'
         title='Git Reference'
-        subtitle='HELLO'
+        subtitle='Subtitle'
         accessoryLeft={renderLeftAction}
         accessoryRight={renderRightActions}
       />
