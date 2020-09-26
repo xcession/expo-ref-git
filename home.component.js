@@ -34,6 +34,11 @@ export const HomeScreen = ({ navigation }) => {
     setMenuVisible(!menuVisible);
   };
 
+  const navigateAbout = () => {
+    navigation.navigate("About");
+    toggleMenu();
+  };
+
   const renderMenuAction = () => (
     <TopNavigationAction icon={MenuIcon} onPress={toggleMenu} />
   );
@@ -50,7 +55,7 @@ export const HomeScreen = ({ navigation }) => {
         <MenuItem
           accessoryLeft={InfoIcon}
           title='About'
-          onPress={() => console.log("About pressed")}
+          onPress={navigateAbout}
         />
       </OverflowMenu>
     </React.Fragment>
