@@ -3,10 +3,11 @@ import {
   Platform,
   SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import Constants from "expo-constants";
+import { StatusBar } from "expo-status-bar";
 import {
   Card,
   Divider,
@@ -80,6 +81,7 @@ export const HomeScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={[styles.container, styles.droidSafeArea]}>
+      <StatusBar style='dark' />
       {/* navigation bar */}
       <TopNavigation
         alignment='center'
@@ -135,7 +137,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   droidSafeArea: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
   },
   fontPrimary: { fontFamily: "RobotoSlab_700Bold" },
   fontSecondary: { fontFamily: "Roboto_400Regular" },

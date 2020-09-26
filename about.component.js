@@ -1,5 +1,4 @@
 import React from "react";
-import Constants from "expo-constants";
 import {
   Image,
   Platform,
@@ -7,6 +6,7 @@ import {
   StatusBar,
   StyleSheet,
 } from "react-native";
+import Constants from "expo-constants";
 import {
   Divider,
   Icon,

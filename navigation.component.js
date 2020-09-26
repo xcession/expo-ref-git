@@ -1,5 +1,6 @@
 import React from "react";
 import { Platform, StatusBar, StyleSheet } from "react-native";
+import Constants from "expo-constants";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -23,6 +24,6 @@ export const AppNavigator = () => (
 
 const styles = StyleSheet.create({
   droidSafeArea: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
   },
 });

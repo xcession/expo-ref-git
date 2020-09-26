@@ -1,5 +1,6 @@
 import React from "react";
 import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
+import Constants from "expo-constants";
 import {
   Divider,
   Icon,
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   droidSafeArea: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
   },
   fontPrimary: { fontFamily: "RobotoSlab_700Bold" },
   fontSecondary: { fontFamily: "Roboto_400Regular" },
