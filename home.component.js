@@ -32,6 +32,11 @@ const InfoIcon = (props) => <Icon {...props} name='info' />;
 export const HomeScreen = ({ navigation }) => {
   const themeContext = React.useContext(ThemeContext);
 
+  const toggleTheme = () => {
+    // console.log("Theme toggled");
+    themeContext.toggleTheme();
+  };
+
   const [menuVisible, setMenuVisible] = React.useState(false);
 
   const toggleMenu = () => {
@@ -53,7 +58,7 @@ export const HomeScreen = ({ navigation }) => {
     <React.Fragment>
       <TopNavigationAction
         icon={themeContext.theme === "light" ? SunIcon : MoonIcon}
-        onPress={themeContext.toggleTheme}
+        onPress={toggleTheme}
       />
       <OverflowMenu
         anchor={renderMenuAction}
