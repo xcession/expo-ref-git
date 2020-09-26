@@ -21,13 +21,18 @@ import {
 } from "@ui-kitten/components";
 import _ from "lodash";
 import { referenceData } from "./data";
+import { ThemeContext } from "./theme-context";
 
 // icons
 const GitIcon = (props) => <Icon {...props} name='github-outline' />;
+const SunIcon = (props) => <Icon {...props} name='sun' />;
+const MoonIcon = (props) => <Icon {...props} name='moon' />;
 const MenuIcon = (props) => <Icon {...props} name='more-vertical' />;
 const InfoIcon = (props) => <Icon {...props} name='info' />;
 
 export const HomeScreen = ({ navigation }) => {
+  const themeContext = React.useContext(ThemeContext);
+
   const [menuVisible, setMenuVisible] = React.useState(false);
 
   const toggleMenu = () => {
@@ -47,6 +52,10 @@ export const HomeScreen = ({ navigation }) => {
 
   const renderRightActions = () => (
     <React.Fragment>
+      <TopNavigationAction
+        icon={themeContext.theme === "light" ? SunIcon : MoonIcon}
+        onPress={themeContext.toggleTheme}
+      />
       <OverflowMenu
         anchor={renderMenuAction}
         visible={menuVisible}

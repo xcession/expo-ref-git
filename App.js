@@ -4,6 +4,7 @@ import { ApplicationProvider, IconRegistry } from "@ui-kitten/components";
 import { default as theme } from "./theme.json"; // <-- Import app theme
 import { EvaIconsPack } from "@ui-kitten/eva-icons";
 import { AppNavigator } from "./navigation.component";
+import { ThemeContext } from "./theme-context";
 import { AppLoading } from "expo";
 import {
   useFonts,
@@ -20,6 +21,8 @@ import {
 } from "@expo-google-fonts/dev";
 
 export default () => {
+  const [theme, setTheme] = React.useState("light");
+
   let [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_400Regular_Italic,
@@ -35,12 +38,19 @@ export default () => {
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
+    const toggleTheme = () => {
+      const nextTheme = theme === "light" ? "dark" : "light";
+      setTheme(nextTheme);
+    };
+
     return (
       <>
         <IconRegistry icons={EvaIconsPack} />
-        <ApplicationProvider {...eva} theme={{ ...eva.light, ...theme }}>
-          <AppNavigator />
-        </ApplicationProvider>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          <ApplicationProvider {...eva} theme={eva[theme]}>
+            <AppNavigator />
+          </ApplicationProvider>
+        </ThemeContext.Provider>
       </>
     );
   }
