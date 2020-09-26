@@ -109,6 +109,7 @@ export const HomeScreen = ({ navigation }) => {
         <ScrollView>
           {referenceData.map((data, key) => {
             return (
+              // card
               <Card
                 style={styles.card}
                 key={key}
@@ -125,6 +126,7 @@ export const HomeScreen = ({ navigation }) => {
                   {data.summary}
                 </Text>
               </Card>
+              // end of card
             );
           })}
         </ScrollView>
