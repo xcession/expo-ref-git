@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  View,
-  Platform,
-} from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 import {
   Card,
