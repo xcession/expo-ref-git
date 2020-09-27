@@ -88,8 +88,8 @@ export const RefScreen = ({ navigation, route }) => {
       {/* end of navigation bar */}
       <Divider />
       {/* content wrapper */}
-      <Layout style={[styles.container, { padding: 8 }]}>
-        <ScrollView>
+      <Layout style={styles.container}>
+        <ScrollView style={{ padding: 8 }}>
           {refContents.map((data, key) => {
             return (
               // card

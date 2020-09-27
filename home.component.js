@@ -109,8 +109,8 @@ export const HomeScreen = ({ navigation }) => {
       <Divider />
       {/* end of header bar */}
       {/* content wrapper */}
-      <Layout style={[styles.container, { padding: 8 }]}>
-        <ScrollView>
+      <Layout style={styles.container}>
+        <ScrollView style={{ padding: 8 }}>
           {refData.map((data, key) => {
             return (
               // card
