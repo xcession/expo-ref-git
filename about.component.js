@@ -23,7 +23,7 @@ export const AboutScreen = ({ navigation }) => {
   );
 
   return (
-    <SafeAreaView style={[styles.container, styles.droidSafeArea]}>
+    <SafeAreaView style={[styles.container, styles.droidStatusBar]}>
       <TopNavigation
         title="About"
         alignment="center"
@@ -62,4 +62,7 @@ const styles = StyleSheet.create({
   },
   fontPrimary: { fontFamily: 'RobotoSlab_700Bold' },
   fontSecondary: { fontFamily: 'Roboto_400Regular' },
+  droidStatusBar: {
+    paddingTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0,
+  },
 });

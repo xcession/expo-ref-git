@@ -48,7 +48,7 @@ export const HomeScreen = ({ navigation }) => {
   };
 
   const navigateReference = data => {
-    console.log(data);
+    // console.log(data);
     navigation.navigate('Reference', { refIndex: data });
   };
 

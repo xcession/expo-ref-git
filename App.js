@@ -1,11 +1,11 @@
-import React from "react";
-import * as eva from "@eva-design/eva";
-import { ApplicationProvider, IconRegistry } from "@ui-kitten/components";
-import { default as theme } from "./theme.json"; // <-- Import app theme
-import { EvaIconsPack } from "@ui-kitten/eva-icons";
-import { AppNavigator } from "./navigation.component";
-import { ThemeContext } from "./theme-context";
-import { AppLoading } from "expo";
+import React from 'react';
+import * as eva from '@eva-design/eva';
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
+import { default as theme } from './theme.json'; // <-- Import app theme
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
+import { AppNavigator } from './navigation.component';
+import { ThemeContext } from './theme-context';
+import { AppLoading } from 'expo';
 import {
   useFonts,
   Roboto_400Regular,
@@ -18,10 +18,10 @@ import {
   RobotoMono_700Bold_Italic,
   RobotoSlab_400Regular,
   RobotoSlab_700Bold,
-} from "@expo-google-fonts/dev";
+} from '@expo-google-fonts/dev';
 
 export default () => {
-  const [theme, setTheme] = React.useState("light");
+  const [theme, setTheme] = React.useState('light');
 
   let [fontsLoaded] = useFonts({
     Roboto_400Regular,
@@ -39,7 +39,7 @@ export default () => {
     return <AppLoading />;
   } else {
     const toggleTheme = () => {
-      const nextTheme = theme === "light" ? "dark" : "light";
+      const nextTheme = theme === 'light' ? 'dark' : 'light';
       setTheme(nextTheme);
     };
 

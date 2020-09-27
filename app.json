@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "expo-ref-git",
-    "slug": "expo-ref-git",
+    "name": "Git Reference",
+    "slug": "git-ref",
     "platforms": ["ios", "android", "web"],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -15,7 +15,13 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.reverievisuals.git_ref",
+      "versionCode": 0
+    },
     "ios": {
+      "buildNumber": "0.0.2",
+      "bundleIdentifier": "com.reverievisuals.git-ref",
       "supportsTablet": false
     }
   }
