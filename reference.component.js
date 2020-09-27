@@ -1,6 +1,5 @@
-import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
-import Constants from "expo-constants";
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import {
   Divider,
   Icon,
@@ -8,7 +7,8 @@ import {
   Text,
   TopNavigation,
   TopNavigationAction,
-} from "@ui-kitten/components";
+} from '@ui-kitten/components';
+import { ThemeContext } from './theme-context';
 
 const BackIcon = (props) => <Icon {...props} name='arrow-back' />;
 const MenuIcon = (props) => <Icon {...props} name='menu' />;
@@ -50,6 +50,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  fontPrimary: { fontFamily: "RobotoSlab_700Bold" },
-  fontSecondary: { fontFamily: "Roboto_400Regular" },
+  fontPrimary: { fontFamily: 'RobotoSlab_700Bold' },
+  fontSecondary: { fontFamily: 'Roboto_400Regular' },
 });
