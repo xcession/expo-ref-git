@@ -18,7 +18,7 @@ import {
   TopNavigation,
   TopNavigationAction,
 } from '@ui-kitten/components';
-import { referenceData } from './data';
+import { refData } from './data';
 import { ThemeContext } from './theme-context';
 
 // icons
@@ -106,7 +106,7 @@ export const HomeScreen = ({ navigation }) => {
       {/* content wrapper */}
       <Layout style={[styles.container, { padding: 8 }]}>
         <ScrollView>
-          {referenceData.map((data, key) => {
+          {refData.map((data, key) => {
             return (
               // card
               <Card

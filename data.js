@@ -1,4 +1,4 @@
-export const referenceData = [
+export const refData = [
   {
     title: 'Prepare Repository',
     summary: 'Start working with a git repository',
