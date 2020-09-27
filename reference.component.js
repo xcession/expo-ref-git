@@ -1,5 +1,12 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  View,
+  Platform,
+} from 'react-native';
+import Constants from 'expo-constants';
 import {
   Card,
   Divider,
@@ -76,7 +83,7 @@ export const RefScreen = ({ navigation, route }) => {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, styles.droidStatusBar]}>
       {/* navigation bar */}
       <TopNavigation
         alignment="center"
@@ -127,6 +134,9 @@ const styles = StyleSheet.create({
   fontPrimary: { fontFamily: 'RobotoSlab_700Bold' },
   fontSecondary: { fontFamily: 'Roboto_400Regular' },
   fontSnippet: { fontFamily: 'RobotoMono_400Regular' },
+  droidStatusBar: {
+    paddingTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0,
+  },
   card: {
     marginBottom: 6,
   },

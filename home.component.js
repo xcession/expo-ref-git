@@ -87,7 +87,7 @@ export const HomeScreen = ({ navigation }) => {
   // const [value, setValue] = React.useState("");
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, styles.droidStatusBar]}>
       {/* navigation bar */}
       <TopNavigation
         alignment="center"
@@ -149,6 +149,9 @@ const styles = StyleSheet.create({
   fontPrimary: { fontFamily: 'RobotoSlab_700Bold' },
   fontSecondary: { fontFamily: 'Roboto_400Regular' },
   fontSnippet: { fontFamily: 'RobotoMono_400Regular' },
+  droidStatusBar: {
+    paddingTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0,
+  },
   headerBar: {
     paddingHorizontal: 16,
     paddingBottom: 6,
