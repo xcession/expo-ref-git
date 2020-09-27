@@ -47,6 +47,11 @@ export const HomeScreen = ({ navigation }) => {
     toggleMenu();
   };
 
+  const navigateReference = data => {
+    console.log(data);
+    navigation.navigate('Reference', { refIndex: data });
+  };
+
   const renderMenuAction = () => (
     <TopNavigationAction icon={MenuIcon} onPress={toggleMenu} />
   );
@@ -112,7 +117,9 @@ export const HomeScreen = ({ navigation }) => {
               <Card
                 style={styles.card}
                 key={key}
-                onPress={() => console.log("Pressed:", { key })}
+                onPress={() => {
+                  navigateReference(data);
+                }}
               >
                 <Text style={styles.fontPrimary} category="h4">
                   {data.title}
