@@ -18,7 +18,6 @@ import {
   TopNavigationAction,
   MenuItem,
 } from "@ui-kitten/components";
-import _ from "lodash";
 import { referenceData } from "./data";
 import { ThemeContext } from "./theme-context";
 
