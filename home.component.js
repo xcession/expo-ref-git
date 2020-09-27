@@ -98,16 +98,16 @@ export const HomeScreen = ({ navigation }) => {
       />
       {/* end of navigation bar */}
       {/* header bar */}
-      <Layout style={styles.headerBar}>
+      {/* <Layout style={styles.headerBar}>
         <Input
           placeholder="Search"
           // value={value}
           // onChangeText={(nextValue) => setValue(nextValue)}
           accessoryRight={SearchIcon}
         />
-      </Layout>
-      <Divider />
+      </Layout> */}
       {/* end of header bar */}
+      <Divider />
       {/* content wrapper */}
       <Layout style={styles.container}>
         <ScrollView style={{ padding: 8 }}>
